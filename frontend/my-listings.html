@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Listings - LeniDeni</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="brand">LeniDeni</div>
+        <nav class="nav-links">
+          <a href="/index.html">Browse</a>
+          <a href="/dashboard.html" data-auth="user">Dashboard</a>
+          <a href="/my-listings.html" data-auth="user">My listings</a>
+          <a href="/messages.html" data-auth="user">Messages</a>
+          <a href="/admin.html" data-role="admin">Admin</a>
+          <button
+            class="btn secondary"
+            type="button"
+            data-auth="user"
+            data-logout
+          >
+            Logout
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>My listings</h2>
+      <div id="myListingsLoader" class="loader">Loading your listings...</div>
+      <p id="myListingsNotice" class="notice"></p>
+      <section class="card-grid" id="myListingsGrid"></section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/my-listings.js"></script>
+  </body>
+</html>

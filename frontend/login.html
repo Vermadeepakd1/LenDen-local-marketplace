@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - LeniDeni</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="brand">LeniDeni</div>
+        <nav class="nav-links">
+          <a href="/index.html">Browse</a>
+          <a href="/dashboard.html" data-auth="user">Dashboard</a>
+          <a href="/messages.html" data-auth="user">Messages</a>
+          <a href="/register.html" class="btn" data-auth="guest"
+            >Create account</a
+          >
+          <button
+            class="btn secondary"
+            type="button"
+            data-auth="user"
+            data-logout
+          >
+            Logout
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <h2>Welcome back</h2>
+        <p class="meta">Login with your email or phone.</p>
+        <form id="loginForm" class="form-grid">
+          <input class="input" name="email" placeholder="Email (optional)" />
+          <input class="input" name="phone" placeholder="Phone (optional)" />
+          <input
+            class="input"
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <button class="btn" type="submit">Login</button>
+        </form>
+        <div id="authLoader" class="loader">Authenticating...</div>
+        <p id="authNotice" class="notice"></p>
+      </section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeniDeni Marketplace</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="brand">LeniDeni</div>
+        <nav class="nav-links">
+          <a href="/index.html">Browse</a>
+          <a href="/dashboard.html" data-auth="user">Dashboard</a>
+          <a href="/messages.html" data-auth="user">Messages</a>
+          <a href="/admin.html" data-role="admin">Admin</a>
+          <a href="/login.html" data-auth="guest">Login</a>
+          <a href="/register.html" class="btn" data-auth="guest">Sell</a>
+          <button
+            class="btn secondary"
+            type="button"
+            data-auth="user"
+            data-logout
+          >
+            Logout
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-content">
+          <span class="eyebrow">Local marketplace</span>
+          <h1>Buy, sell, and swap with confidence in your city.</h1>
+          <p class="hero-subtitle">
+            LeniDeni brings verified sellers, clean listings, and real-time
+            messaging together so you can move faster than big marketplaces.
+          </p>
+          <div class="hero-cta">
+            <a href="/register.html" class="btn">Start selling</a>
+            <a href="#listings" class="btn secondary">Browse listings</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <h3>24h</h3>
+              <p>Average response time</p>
+            </div>
+            <div class="stat-card">
+              <h3>50+</h3>
+              <p>Categories to explore</p>
+            </div>
+            <div class="stat-card">
+              <h3>1K+</h3>
+              <p>Verified sellers</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-card primary">
+            <p class="tag">Featured</p>
+            <h4>Smartphone Pro Max</h4>
+            <p class="price">$799</p>
+          </div>
+          <div class="visual-card secondary">
+            <p class="tag">Just listed</p>
+            <h4>Designer Office Chair</h4>
+            <p class="price">$180</p>
+          </div>
+          <div class="visual-card accent">
+            <p class="tag">Trending</p>
+            <h4>Gaming Console 2.0</h4>
+            <p class="price">$420</p>
+          </div>
+        </div>
+      </section>
+
+      <div id="listings"></div>
+      <form id="filterForm" class="filter-bar" aria-label="Search listings">
+        <input class="input" name="search" placeholder="Search listings" />
+        <select class="input" name="category">
+          <option value="">Any category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Home">Home</option>
+          <option value="Vehicles">Vehicles</option>
+          <option value="Services">Services</option>
+          <option value="Books">Books</option>
+          <option value="Sports">Sports</option>
+          <option value="Other">Other</option>
+        </select>
+        <input
+          class="input"
+          name="minPrice"
+          placeholder="Min price"
+          type="number"
+        />
+        <input
+          class="input"
+          name="maxPrice"
+          placeholder="Max price"
+          type="number"
+        />
+        <select class="input" name="condition">
+          <option value="">Any condition</option>
+          <option value="New">New</option>
+          <option value="Used">Used</option>
+        </select>
+        <input class="input" name="city" placeholder="City" />
+        <input class="input" name="state" placeholder="State" />
+        <input class="input" name="locationName" placeholder="Location name" />
+        <button class="btn" type="submit">Search</button>
+      </form>
+
+      <div id="listLoader" class="loader">Loading listings...</div>
+      <section class="card-grid" id="productGrid" aria-live="polite"></section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

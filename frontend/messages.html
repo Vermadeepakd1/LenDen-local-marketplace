@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages - LeniDeni</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="brand">LeniDeni</div>
+        <nav class="nav-links">
+          <a href="/index.html">Browse</a>
+          <a href="/dashboard.html" data-auth="user">Dashboard</a>
+          <a href="/my-listings.html" data-auth="user">My listings</a>
+          <a href="/messages.html" data-auth="user">Messages</a>
+          <a href="/admin.html" data-role="admin">Admin</a>
+          <button
+            class="btn secondary"
+            type="button"
+            data-auth="user"
+            data-logout
+          >
+            Logout
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Messages</h2>
+      <div id="messagesLoader" class="loader">Loading messages...</div>
+      <p id="messagesNotice" class="notice"></p>
+      <section class="chat-layout">
+        <aside class="chat-sidebar">
+          <div class="chat-sidebar-header">Threads</div>
+          <div id="threadList" class="chat-thread-list"></div>
+        </aside>
+        <section class="chat-panel">
+          <div class="chat-panel-header" id="chatHeader">
+            Select a thread to start chatting.
+          </div>
+          <div class="chat-panel-body" id="chatBody"></div>
+          <form class="chat-input" id="chatForm">
+            <textarea
+              class="input"
+              name="content"
+              rows="2"
+              placeholder="Write a message"
+              required
+            ></textarea>
+            <button class="btn" type="submit">Send</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/messages.js"></script>
+  </body>
+</html>

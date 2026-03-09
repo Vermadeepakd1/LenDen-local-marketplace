@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - LeniDeni</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="brand">LeniDeni</div>
+        <nav class="nav-links">
+          <a href="/index.html">Browse</a>
+          <a href="/my-listings.html" data-auth="user">My listings</a>
+          <a href="/messages.html" data-auth="user">Messages</a>
+          <a href="/admin.html" data-role="admin">Admin</a>
+          <button
+            class="btn secondary"
+            type="button"
+            data-auth="user"
+            data-logout
+          >
+            Logout
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Your dashboard</h2>
+      <div id="dashLoader" class="loader">Loading dashboard...</div>
+      <p id="dashNotice" class="notice"></p>
+      <section id="profileCard"></section>
+
+      <h3 class="section-title">Create listing</h3>
+      <section class="form-card">
+        <form id="createForm" class="form-grid">
+          <input class="input" name="title" placeholder="Title" required />
+          <textarea
+            class="input"
+            name="description"
+            placeholder="Description"
+            rows="4"
+            required
+          ></textarea>
+          <select class="input" name="category" required>
+            <option value="" disabled selected>Select category</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Home">Home</option>
+            <option value="Vehicles">Vehicles</option>
+            <option value="Services">Services</option>
+            <option value="Books">Books</option>
+            <option value="Sports">Sports</option>
+            <option value="Other">Other</option>
+          </select>
+          <input
+            class="input"
+            name="price"
+            type="number"
+            placeholder="Price"
+            required
+          />
+          <select class="input" name="condition" required>
+            <option value="" disabled selected>Condition</option>
+            <option value="New">New</option>
+            <option value="Used">Used</option>
+          </select>
+          <input class="input" name="city" placeholder="City" required />
+          <input class="input" name="state" placeholder="State" required />
+          <input
+            class="input"
+            name="locationName"
+            placeholder="Location name (area or landmark)"
+          />
+          <input class="input" name="images" type="file" multiple />
+          <button class="btn" type="submit">Publish</button>
+        </form>
+      </section>
+
+      <h3 class="section-title">Your listings</h3>
+      <section class="card-grid" id="listingsGrid"></section>
+
+      <h3 class="section-title">Favorites</h3>
+      <section class="card-grid" id="favoritesGrid"></section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>

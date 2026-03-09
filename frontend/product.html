@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product - LeniDeni</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="brand">LeniDeni</div>
+        <nav class="nav-links">
+          <a href="/index.html">Browse</a>
+          <a href="/dashboard.html" class="btn" data-auth="user">Dashboard</a>
+          <a href="/messages.html" data-auth="user">Messages</a>
+          <a href="/admin.html" data-role="admin">Admin</a>
+          <a href="/login.html" data-auth="guest">Login</a>
+          <button
+            class="btn secondary"
+            type="button"
+            data-auth="user"
+            data-logout
+          >
+            Logout
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="productLoader" class="loader">Loading listing...</div>
+      <section id="productDetails"></section>
+
+      <section class="form-card">
+        <h3>Save this listing</h3>
+        <button id="favoriteBtn" class="btn secondary" type="button">
+          Save to favorites
+        </button>
+        <p id="productNotice" class="notice"></p>
+      </section>
+    </main>
+
+    <div class="modal-overlay" id="contactModal">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Send message to seller</h3>
+          <button class="icon-btn" type="button" id="contactClose">X</button>
+        </div>
+        <p class="meta" id="contactMeta"></p>
+        <form id="contactForm" class="form-grid">
+          <textarea
+            class="input"
+            name="content"
+            rows="4"
+            placeholder="Write your message"
+            required
+          ></textarea>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+        <div id="contactLoader" class="loader">Sending...</div>
+        <p id="contactNotice" class="notice"></p>
+      </div>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/product.js"></script>
+  </body>
+</html>

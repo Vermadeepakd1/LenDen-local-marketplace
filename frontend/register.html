@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - LeniDeni</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="brand">LeniDeni</div>
+        <nav class="nav-links">
+          <a href="/index.html">Browse</a>
+          <a href="/dashboard.html" data-auth="user">Dashboard</a>
+          <a href="/messages.html" data-auth="user">Messages</a>
+          <a href="/login.html" class="btn secondary" data-auth="guest"
+            >Login</a
+          >
+          <button
+            class="btn secondary"
+            type="button"
+            data-auth="user"
+            data-logout
+          >
+            Logout
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <h2>Create your account</h2>
+        <form id="registerForm" class="form-grid">
+          <input class="input" name="name" placeholder="Full name" required />
+          <input class="input" name="email" placeholder="Email" />
+          <input class="input" name="phone" placeholder="Phone" />
+          <input
+            class="input"
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <input class="input" name="city" placeholder="City" />
+          <input class="input" name="state" placeholder="State" />
+          <input
+            class="input"
+            name="lat"
+            placeholder="Latitude"
+            type="number"
+            step="0.0001"
+          />
+          <input
+            class="input"
+            name="lng"
+            placeholder="Longitude"
+            type="number"
+            step="0.0001"
+          />
+          <button class="btn" type="submit">Create account</button>
+        </form>
+        <div id="authLoader" class="loader">Creating account...</div>
+        <p id="authNotice" class="notice"></p>
+      </section>
+    </main>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/register.js"></script>
+  </body>
+</html>
