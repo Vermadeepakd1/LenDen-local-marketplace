@@ -351,3 +351,5 @@ All API routes are under /api.
 - Add pagination for large listing/message datasets.
 - Add Docker support and CI pipeline.
 - Add OpenAPI/Swagger documentation for API contracts.
+
+- incremental update 1: clarify app behavior and workflow
