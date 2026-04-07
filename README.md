@@ -353,3 +353,5 @@ All API routes are under /api.
 - Add OpenAPI/Swagger documentation for API contracts.
 
 - incremental update 1: clarify app behavior and workflow
+
+- incremental update 2: clarify app behavior and workflow
