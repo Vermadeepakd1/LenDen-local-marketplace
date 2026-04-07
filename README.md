@@ -381,3 +381,5 @@ All API routes are under /api.
 - incremental update 14: clarify app behavior and workflow
 
 - incremental update 15: clarify app behavior and workflow
+
+- incremental update 16: clarify app behavior and workflow
