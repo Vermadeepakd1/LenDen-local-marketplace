@@ -351,3 +351,4 @@ All API routes are under /api.
 - Add pagination for large listing/message datasets.
 - Add Docker support and CI pipeline.
 - Add OpenAPI/Swagger documentation for API contracts.
+This project is continuously evolving to provide a more seamless peer-to-peer commerce experience.
