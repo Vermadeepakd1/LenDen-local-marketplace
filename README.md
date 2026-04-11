@@ -2,7 +2,9 @@
 
 LeniDeni is a full-stack marketplace application (OLX-style) built with Node.js, Express, MongoDB, and a vanilla HTML/CSS/JS frontend. It supports user and admin roles, listing approval, favorites, messaging, geolocation search, and seller workflows such as mark-as-sold and listing image management.
 
+
 ## Table of Contents
+
 
 - Project Overview
 - Core Features
@@ -29,9 +31,12 @@ LeniDeni provides a local-classifieds style experience with moderation and owner
 
 The frontend is served directly by the backend Express server.
 
+
 ## Core Features
 
+
 ### User features
+
 
 - Authentication with email or phone login.
 - Create, edit, and delete self-owned listings.
@@ -43,7 +48,9 @@ The frontend is served directly by the backend Express server.
 - Buyer/seller messaging with edit/delete message support.
 - View purchased items.
 
+
 ### Admin features
+
 
 - Dashboard stats.
 - View all users.
@@ -51,12 +58,15 @@ The frontend is served directly by the backend Express server.
 - View all listings.
 - Approve/reject/remove listings.
 
+
 ### Search and location features
+
 
 - Filter listings by search, category, condition, city/state.
 - Price range filtering.
 - Geospatial search with radius using MongoDB geospatial indexing.
 - Automatic geocoding fallback via OpenStreetMap Nominatim.
+
 
 ## Tech Stack
 
