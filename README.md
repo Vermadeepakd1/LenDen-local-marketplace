@@ -17,7 +17,7 @@ LeniDeni is a full-stack marketplace application (OLX-style) built with Node.js,
 - Frontend Pages
 - Troubleshooting
 - Security Notes
-- Future Improvements
+- Future Improvementss
 
 ## Project Overview
 
