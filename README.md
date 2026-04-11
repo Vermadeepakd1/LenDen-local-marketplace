@@ -144,6 +144,7 @@ Create a .env file in the project root.
 - LISTING_REVIEW_TOKEN_SECRET (optional, falls back to JWT_SECRET)
 - LISTING_REVIEW_TOKEN_EXPIRES_IN (default: 3d)
 
+
 ### Brevo email settings (required for sending emails)
 
 - BREVO_API_KEY
